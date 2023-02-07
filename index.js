@@ -5,7 +5,8 @@ const PORT = 4000;
 const mongoose = require('mongoose');
 mongoose.set('strictQuery', true);
 const notFound = require("./middleware/notFound")
-const userRouter = require("./route/userRouter")
+// const userRouter = require("./route/userRouter")
+const newRouter = require("./route/newUserRouter")
 
 // const employeeRouter = require('./routes/employeeRouter');
 // con
@@ -15,7 +16,7 @@ app.set('view engine', "ejs")
 app.use(express.json());
 
 //route
-app.use(userRouter)
+app.use(newRouter)
 
 //error
 app.use(notFound);
