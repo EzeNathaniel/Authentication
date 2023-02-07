@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+</head>
+<body>
+    <div class="change">
+    <nav>
+        <ul>
+            <li>
+                <a href="/dashboard">dashboard</a>
+            </li>
+            <li><a href="/register">register</a></li>
+        </ul>
+    </nav>
+    <h1>dashboard</h1></div>
+    <style>
+        .james{
+        width: 100%;
+        height:70px;
+        background-color:green;
+       scroll-padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        gap: 4px;
+    }
+    .fade{
+        background-color: red;
+      position: absolute;
+    }
+    .change{
+        background-color: burlywood;
+    }
+    </style>
+
+<div class="james">
+    <form action ="/employee" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" required id="name" name="name"/>
+        </div>
+        <div>
+            <label for="role">Surname:</label>
+            <input type="text" required id ="role" name="Surname"/>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" required id ="age" name="age"/>
+        </div>
+        <button class="fade" type="submit">Submit</button>
+    </form>
+</div>
+    <!-- <input type="text" value ><br>
+    <input type ="number"><br>
+    <input type="text"><br>
+    <button>Submit</button> -->
+</body>
+</html>

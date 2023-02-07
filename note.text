@@ -17,4 +17,10 @@ mongoose hooks(middleware)
 
 authentication (session based(cookies and token based)
 protectiing route using authentication
+
+
 integrating ejs views
+install ejs
+--setting view engine
+- views - signup, login, dashboard
+

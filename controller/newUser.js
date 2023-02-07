@@ -66,8 +66,18 @@ const login = async (req, res)=>{
         const errors = handleErrors(error)
         res.status(400).json({errors});
     }
-
-
-
 }
-module.exports = {register, login};
+
+const signup =  (req, res)=>{
+    res.render('register')
+    
+    }
+    const signin =  (req, res)=>{
+        res.render('signin')
+        
+        }
+        const dashboard =  (req, res)=>{
+            res.render('dashboard')
+            
+            }
+module.exports = {register, login, signup, signin, dashboard};
