@@ -38,7 +38,7 @@ const register = async (req, res)=>{
         res.status(201).json({success: true, data: user});
     }catch (error){
         const errors = handleErrors(error)
-        res.status(400).json({errors});
+        res.status(400).json({success:false, errors});
     }
 
 }
@@ -47,8 +47,9 @@ const login = async (req, res)=>{
     // res.send ('Login user');
     const {email, password} = req.body;
     try {
-        if(!email || !password)
-        return res(404).json ({success:false, message: 'please provide valid Email'})
+        if(!email || !password){
+            return res.status(404).json ({success:false, message: 'please provide valid Email'})
+        } 
 
         // email is registered
         const user = await Users.findOne({email})
@@ -64,20 +65,20 @@ const login = async (req, res)=>{
         // console.log(error)
         // res.send ('error occured')
         const errors = handleErrors(error)
-        res.status(400).json({errors});
+        res.status(400).json({errors, success: false});
     }
 }
 
 const signup =  (req, res)=>{
-    res.render('register')
-    
-    }
-    const signin =  (req, res)=>{
-        res.render('signin')
-        
-        }
-        const dashboard =  (req, res)=>{
-            res.render('dashboard')
-            
-            }
+res.render('signup')
+
+}
+const signin =  (req, res)=>{
+res.render('login')
+
+}
+const dashboard =  (req, res)=>{
+res.render('dashboard')
+
+}
 module.exports = {register, login, signup, signin, dashboard};

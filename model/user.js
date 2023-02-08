@@ -9,6 +9,11 @@ const {isEmail} = require('validator')
 // for each employee we want their - name roles, level, age
 //timestamps - createdAt - updateAt
 const usersSchema = new Schema({
+    // // username:{
+    // //     type: String,
+    // //     required: [true,  "Please provide a username"]
+
+    // },
     email: {
         type: String,
         unique: [true, "this email has been registered"],
